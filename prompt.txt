@@ -1,0 +1,111 @@
+Prompt: Inisialisasi Konteks LMS DonatJS
+Peran: Bertindaklah sebagai Senior Software Architect yang ahli dalam pengembangan web berbasis "Minimal Web Infrastructure" dan "Zero-Dependency".
+
+Konteks Proyek:
+Saya sedang mengembangkan sebuah platform LMS (Learning Management System) menggunakan framework buatan saya sendiri bernama DonatJS.
+
+Filosofi: Ringan, modular, static-first, dan tanpa library pihak ketiga.
+
+Tujuan: Menjadi portal kursus intensif, kuis, dan penerbitan sertifikat digital.
+
+Identitas Pengampu: Saya adalah seorang Scholar-Entrepreneur (Dosen & PhD Candidate) yang fokus pada efisiensi arsitektur software.
+
+Tugas:
+Buatkan struktur data JSON untuk variabel home di dalam file dataset.js yang mencerminkan sebuah Portal Kursus Profesional. Data ini harus mencakup:
+
+Hero Section:
+
+Judul kursus: "Fullstack Web Development with DonatJS MVC".
+
+Tagline yang menonjolkan efisiensi dan performa tinggi.
+
+Badge informasi: Batch kursus, level (Intermediate), dan metode (Project-Based).
+
+Features Section (3 Kolom):
+
+Target Peserta: Mahasiswa IT & Developer yang ingin belajar Clean Code.
+
+Kurikulum: Menjelaskan silabus singkat (Modern JS, MVC, Security, Deployment).
+
+Output: Portofolio nyata, sertifikat kompetensi BNSP, dan akses komunitas.
+
+Article Section (Informasi Rinci):
+
+Kiri (Kurikulum): Daftar capaian pembelajaran termasuk riset Face Recognition (OpenCV/MediaPipe) dan Minimal Infrastructure.
+
+Kanan (Profil Pengampu): Nama lengkap (Wawan Sismadi, S.Kom., M.Kom.), status Dosen IPWIJA & S3 UAD, serta visi menjembatani riset akademis dengan industri.
+
+Aturan Penulisan Kode:
+
+Gunakan struktur array objek sesuai standar DonatJS.
+
+Gunakan tag HTML sederhana seperti <b>, &bull;, atau <br> jika diperlukan untuk estetika teks.
+
+Pastikan semua linkTarget mengarah ke rute yang relevan seperti learn, expertise, atau solutions.
+
+Tips Tambahan untuk Anda:
+Jika Anda ingin AI menambahkan elemen visual: Tambahkan instruksi "Gunakan icon class dari svg.css yang tersedia (misal: di-person, di-save, di-setting)".
+
+Jika ingin menonjolkan sisi akademis: Tambahkan instruksi "Sertukan SINTA ID atau referensi publikasi di bagian profil pengampu".
+
+Dengan prompt ini, AI tidak akan lagi memperlakukan proyek Anda sebagai website perusahaan biasa, melainkan sebagai platform pendidikan teknis yang serius.
+
+
+
+Berikut adalah draf prompt yang dirancang khusus agar AI dapat menghasilkan modul pembelajaran (Learn) yang terstruktur, kaya fitur, dan sesuai dengan format mesin render DonatJS milik Anda:
+
+Prompt: Pengembangan Modul Kurikulum LMS DonatJS
+Peran: Bertindaklah sebagai Instructional Designer dan Senior Web Developer yang ahli dalam menyusun kurikulum teknis berbasis proyek.
+
+Tugas: Buatkan data JSON untuk variabel learn di dataset.js untuk kursus "Fullstack Web Development with DonatJS". Modul ini harus dibagi menjadi kategori-kategori logis (misalnya: Fondasi, UI/UX, Backend & Logic, Final Project).
+
+Spesifikasi Struktur Data:
+
+Gunakan format: learn: { categories: [ { name: 'Nama Kategori', items: [ ... ] } ] }.
+
+Setiap item (modul) harus memiliki: id, title, dan lines (array of strings).
+
+Panduan Konten (Pedagogi):
+
+Narasi: Gunakan bahasa yang profesional namun memotivasi.
+
+Komponen Visual (Wajib Digunakan): Gunakan sintaks khusus DonatJS di dalam array lines:
+
+### Judul: Untuk sub-bab.
+
+---: Untuk garis pemisah.
+
+skill:[persentase]:[Judul]:[Keterangan]: Untuk target capaian (contoh: skill:90%:DOM Mastery:Manipulasi elemen tanpa jQuery).
+
+card:[Judul]=[Subjudul]:[Deskripsi]: Untuk menyoroti konsep kunci.
+
+step:[Tahun/Urutan]:[Judul]:[Deskripsi]: Untuk alur kerja atau roadmap.
+
+table:[{"Kolom1": "Isi", "Kolom2": "Isi"}]: Untuk instruksi tugas atau jadwal praktikum (format JSON string di dalam array).
+
+Daftar Modul yang Harus Dibuat:
+
+Modul 1 (Fondasi): Dasar JavaScript Modern (ES6+), variabel, dan arrow functions.
+
+Modul 2 (Arsitektur): Pengenalan MVC di DonatJS, State Management, dan Routing.
+
+Modul 3 (UI Komponen): Pembuatan Modal, Toast Notification, dan Layout dinamis (gunakan contoh Pertemuan 4 yang sudah ada sebagai referensi gaya bahasa).
+
+Modul 4 (Interaksi Data): Menghubungkan Form ke Dataset dan simulasi penyimpanan data.
+
+Aturan Penulisan:
+
+Pastikan ID modul unik (contoh: js-basics, mvc-arch).
+
+Jangan gunakan library eksternal dalam penjelasan materi.
+
+Fokus pada Clean Code dan Minimalism.
+
+Cara Menggunakan Prompt Ini:
+Gunakan prompt ini setiap kali Anda ingin menambah kategori baru atau memperdalam isi modul.
+
+Jika Anda ingin fokus pada satu modul saja (misal hanya Modul Database), cukup ubah bagian Daftar Modul yang Harus Dibuat menjadi spesifik.
+
+Hasil dari AI bisa langsung Anda copy-paste ke dalam objek learn di file dataset.js.
+
+Dengan prompt ini, AI akan otomatis memberikan output yang mengandung tabel tugas, bar persentase kemampuan (skill bar), dan kartu-kartu penjelasan yang membuat tampilan LMS Anda terlihat sangat profesional.

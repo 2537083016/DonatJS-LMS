@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /dataset.js
+Allow: /script.js
+Allow: /style.css
+
+# Mencegah indexing untuk file sistem atau backup jika ada
+Disallow: /private/
+Disallow: /config/
+
+# Lokasi Sitemap
+Sitemap: https://sismadi.co.id/sitemap.xml

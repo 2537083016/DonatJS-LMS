@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sismadi.co.id/</loc>
+    <lastmod>2024-05-20</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://sismadi.co.id/?profile</loc>
+    <lastmod>2024-05-20</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sismadi.co.id/?expertise</loc>
+    <lastmod>2024-05-20</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sismadi.co.id/?solutions</loc>
+    <lastmod>2024-05-20</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://sismadi.co.id/?press</loc>
+    <lastmod>2024-05-20</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://sismadi.co.id/?order</loc>
+    <lastmod>2024-05-20</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://sismadi.co.id/?contact</loc>
+    <lastmod>2024-05-20</lastmod>
+    <priority>0.60</priority>
+  </url>
+</urlset>
