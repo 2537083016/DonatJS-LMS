@@ -2,7 +2,7 @@ name: Lighthouse CI Performance Testing
 
 on:
   push:
-    branches: [main]
+    branches: [main] # Atau branch lain yang Anda gunakan
 
 jobs:
   lighthouse:
@@ -12,31 +12,25 @@ jobs:
       # 1. Checkout Code
       - uses: actions/checkout@v4
       
-      # 2. Deploy ke Netlify (Langsung upload folder, tanpa build npm)
+      # 2. Deploy ke Netlify (Action ini otomatis menunggu sampai selesai)
       - name: Deploy to Netlify
+        id: netlify_deploy # <--- PENTING: Beri ID pada step ini
         uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: './' # Asumsi file index.html ada di root
-          production-deploy: false
+          publish-dir: './' 
+          production-deploy: false # Tetap false agar aman saat testing
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          enable-commit-comment: false
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
-      # 3. Tunggu Netlify Siap
-      - name: Wait for Netlify
-        uses: jakepartusch/wait-for-netlify-action@v1.4
-        id: netlify
-        with:
-          site_name: '${{ secrets.NETLIFY_SITE_NAME }}' # Pastikan ini sesuai di Secrets
-          max_timeout: '120'
-
-      # 4. Jalankan LHCI
+      # 3. Jalankan LHCI (Langsung pakai URL dari step sebelumnya)
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
-            ${{ steps.netlify.outputs.url }}
+            ${{ steps.netlify_deploy.outputs.deploy-url }} # <--- Mengambil URL langsung
           uploadArtifacts: true
           temporaryPublicStorage: true
-          configPath: './lighthouserc.json' # Pastikan file ini ada di root repo Anda
+          configPath: './lighthouserc.json'
